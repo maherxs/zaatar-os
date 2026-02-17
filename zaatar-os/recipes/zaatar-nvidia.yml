@@ -1,0 +1,7 @@
+name: zaatar-nvidia
+description: Zaatar OS NVIDIA - New Arabic Linux distribution with NVIDIA support
+base-image: ghcr.io/ublue-os/aurora-nvidia-open
+image-version: stable
+
+modules:
+  - from-file: common.yml

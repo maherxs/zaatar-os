@@ -1,0 +1,39 @@
+[org/gnome/desktop/interface]
+gtk-theme='MacTahoe-Dark'
+icon-theme='MacTahoe'
+cursor-theme='MacTahoe-cursors'
+font-name='Cairo 11'
+document-font-name='Cairo 11'
+color-scheme='prefer-dark'
+locale='ar_SY.UTF-8'
+
+[org/gnome/desktop/wm/preferences]
+button-layout='close,minimize,maximize:'
+titlebar-font='Cairo Bold 11'
+
+[org/gnome/shell]
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com', 'just-perfection-desktop@just-perfection', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'burn-my-windows@schneegans.github.com', 'caffeine@patapon.info', 'clipboard-indicator@tudmotu.com', 'nightthemeswitcher@romainvigier.fr']
+
+[org/gnome/shell/extensions/user-theme]
+name='MacTahoe-Dark'
+
+[org/gnome/shell/extensions/dash-to-dock]
+dock-position='BOTTOM'
+dock-fixed=false
+autohide=true
+transparency-mode='DYNAMIC'
+background-opacity=0.3
+dash-max-icon-size=52
+show-trash=false
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'ara'), ('xkb', 'us')]
+current=uint32 0
+
+[org/gnome/system/locale]
+region='ar_SY.UTF-8'
+
+[org/gnome/desktop/interface]
+clock-format='12h'
+clock-show-seconds=false
+clock-show-weekday=true

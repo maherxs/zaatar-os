@@ -1,0 +1,7 @@
+name: zaatar
+description: Zaatar OS - New Arabic Linux distribution, modern and easy to use
+base-image: ghcr.io/ublue-os/aurora
+image-version: stable
+
+modules:
+  - from-file: common.yml

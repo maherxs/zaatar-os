@@ -1,0 +1,59 @@
+modules:
+
+  - type: rpm-ostree
+    install:
+      - gnome-extensions-app
+      - gnome-shell-extension-user-theme
+      - gnome-shell-extension-dash-to-dock
+      - gnome-tweaks
+      - dconf-editor
+      - sassc
+      - glib2-devel
+      - gtk-murrine-engine
+      - git
+      - wget
+      - unzip
+      - jq
+      - glibc-langpack-ar
+      - langpacks-ar
+      - hunspell-ar
+
+  - type: script
+    scripts:
+      - install-tahoe-theme.sh
+
+  - type: script
+    scripts:
+      - install-extensions.sh
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - CascadiaCode
+      google-fonts:
+        - Cairo
+        - Amiri
+        - Noto Sans Arabic
+        - Tajawal
+        - Readex Pro
+
+  - type: gschema-overrides
+    include:
+      - zz1-zaatar.gschema.override
+
+  - type: default-flatpaks
+    notify: true
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      install:
+        - org.mozilla.firefox
+        - org.libreoffice.LibreOffice
+        - org.gnome.Evince
+        - org.gnome.TextEditor
+        - org.videolan.VLC
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.clocks
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - org.telegram.desktop

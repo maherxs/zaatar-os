@@ -1,0 +1,11 @@
+/.bluebuild-scripts_*
+
+# Signing keys (never commit private key - cosign.pub is required for build)
+cosign.key
+cosign.private
+*.key
+*.pub
+
+# Build artifacts
+*.tar
+*.tar.gz

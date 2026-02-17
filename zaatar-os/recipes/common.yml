@@ -1,0 +1,78 @@
+modules:
+
+  # ── Dependencies ──────────────────────────────────────────
+  - type: rpm-ostree
+    install:
+      - gnome-extensions-app
+      - gnome-shell-extension-user-theme
+      - gnome-shell-extension-dash-to-dock
+      - gnome-tweaks
+      - dconf-editor
+      - sassc
+      - glib2-devel
+      - gtk-murrine-engine
+      - git
+      - wget
+      - unzip
+      - jq
+      # ── Arabic Language Packages ──────────────────────────
+      - glibc-langpack-ar
+      - langpacks-ar
+      - hunspell-ar
+
+  # ── MacTahoe Theme + Icons + Cursors ──────────────────────
+  - type: script
+    scripts:
+      - install-tahoe-theme.sh
+
+  # ── GNOME Extensions ──────────────────────────────────────
+  - type: script
+    scripts:
+      - install-extensions.sh
+
+  # ── Arabic Language and Locale Setup ───────────────────────
+  - type: script
+    scripts:
+      - setup-arabic-locale.sh
+
+  # ── Arabic Fonts ──────────────────────────────────────────
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - CascadiaCode
+      google-fonts:
+        - Cairo
+        - Amiri
+        - Noto Sans Arabic
+        - Tajawal
+        - Readex Pro
+
+  # ── System Settings ───────────────────────────────────────
+  - type: gschema-overrides
+    include:
+      - gschema-overrides/zz1-zaatar.gschema.override
+
+  # ── Essential Apps (Flatpak from Flathub) ────────────────────
+  - type: default-flatpaks
+    notify: true
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      install:
+        # ── Browsing & Web ─────────────────────────────────────
+        - org.mozilla.firefox
+        # ── Office & Documents ─────────────────────────────────
+        - org.libreoffice.LibreOffice
+        - org.gnome.Evince
+        - org.gnome.TextEditor
+        # ── Media ─────────────────────────────────────────────
+        - org.videolan.VLC
+        - org.gimp.GIMP
+        # ── Utilities ─────────────────────────────────────────
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.clocks
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - io.github.seadve.Kooha
+        # ── Communication ─────────────────────────────────────
+        - org.telegram.desktop

@@ -1,0 +1,12 @@
+/.bluebuild-scripts_*
+
+# Signing keys (never commit these!)
+keys/
+cosign.key
+cosign.pub
+*.key
+*.pub
+
+# Build artifacts
+*.tar
+*.tar.gz
